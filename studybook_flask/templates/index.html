@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart StudyBook Generator</title>
+<style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: #eef2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 400px;
+  }
+  h1 { color: #1a237e; }
+  input[type=file] { margin: 15px 0; }
+  button {
+    background: #1a237e; color: white;
+    border: none; padding: 10px 20px;
+    border-radius: 6px; cursor: pointer;
+    font-size: 15px;
+  }
+  button:hover { background: #3949ab; }
+</style>
+</head>
+<body>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <h1>📘 Smart StudyBook</h1>
+    <p>Upload multiple files (PDF, DOCX, PPTX, XLSX, TXT)</p>
+    <input type="file" name="files" multiple required>
+    <br>
+    <button type="submit">Generate StudyBook</button>
+  </form>
+</body>
+</html>
